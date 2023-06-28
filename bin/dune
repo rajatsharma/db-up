@@ -1,4 +1,8 @@
 (executable
  (public_name db-up)
  (name main)
- (libraries db_up ez_file))
+ (libraries db_up ez_file)
+ (preprocess (pps ppx_blob))
+ (preprocessor_deps
+   (file docker-compose.yaml)
+ ))

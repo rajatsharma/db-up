@@ -2,12 +2,13 @@
 
 module Main where
 
+import Data.Data (Data)
+import Data.FileEmbed (embedStringFile)
 import Data.Text (pack, replace)
-import FileEmbed (embedFile)
 import Text.Printf (printf)
 
 dockerFile :: String
-dockerFile = $(embedFile "docker-compose.yml")
+dockerFile = $(embedStringFile "docker-compose.yml")
 
 main :: IO ()
 main = do

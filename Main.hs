@@ -12,4 +12,4 @@ dockerFile = $(embedStringFile "docker-compose.yml")
 
 main :: IO ()
 main = do
-  writeFile "docker-compose.yml" dockerFile
+  writeFile "compose.yml" dockerFile
